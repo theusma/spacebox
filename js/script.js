@@ -14,15 +14,12 @@ function carregaElementosNaPagina(json) {
 
     var item = document.createElement('div');
     item.className = 'item';
-
+    document.getElementsByTagName('body')[0].appendChild(item);
     
     if(x == 0){
       item.classList.add("ativo");
     }
-
     x++;
-
-
     item.onclick = function(){
       document.querySelector('.informacoes .idade strong').innerHTML =  this.querySelector('.idade').innerHTML     
       document.querySelector('.informacoes .nome strong').innerHTML =  this.querySelector('.nome').innerHTML   
@@ -31,48 +28,62 @@ function carregaElementosNaPagina(json) {
       
 
     };
+    //ADICIONA  UMA DIV QUE TODOS ELEMENTOS DA IMAGEM 
+    var imagem = document.createElement('div');
+    imagem.className = 'todaImagem';
+    document.getElementsByTagName('body')[0].appendChild(imagem);
 
-
-
-    //item.onclick = function(){console.log(this)};
-    document.getElementsByTagName('body')[0].appendChild(item);
-
+    //ADICIONA  UM DIV QUE ENGLOBA A IMAGEM A CLASS  mascaraImagem imagem
     var foto = document.createElement('div');
-    foto.className = 'mascaraImagem imagem';
+    foto.className = 'mascaraImagem';
     document.getElementsByTagName('body')[0].appendChild(foto);
 
+    //ADICIONA  UMA TAG IMG COM A CLASS  FOTO
+    var img = document.createElement("img");
+    img.className = 'foto';
+    img.src = 'images/' + pessoa.foto;
+    document.getElementsByTagName('body')[0].appendChild(img);
+
+    //ADICIONA  UM P COM A CLASS  numeroId
     var id = document.createElement('p');
     id.className = 'numeroId';
     id.innerHTML = pessoa.id;
     document.getElementsByTagName('body')[0].appendChild(id);
-
+    
+    //ADICIONA  UM P COM A CLASS  idade
     var idade = document.createElement('p');
     idade.className = 'idade';
     idade.innerHTML = pessoa.idade;
     document.getElementsByTagName('body')[0].appendChild(idade);
 
-    var img = document.createElement("img");
-    img.className = 'foto';
-    img.src = 'images/' + pessoa.foto;
-    document.getElementsByTagName('body')[0].appendChild(img);
-   
+    //ADICIONA  UMA DIV QUE ENGLOBA 2 ELEMENTOS 
+    var texto = document.createElement('div');
+    texto.className = 'texto';
+    document.getElementsByTagName('body')[0].appendChild(texto);
+
+    //ADICIONA  UM P COM A CLASS  nome
     var nome = document.createElement('p');
     nome.className = 'nome';
     nome.innerHTML = pessoa.nome;
     document.getElementsByTagName('body')[0].appendChild(nome);
 
+    //ADICIONA  UM P COM A CLASS  cargo
     var cargo = document.createElement('p');
     cargo.className = 'cargo';
     cargo.innerHTML = pessoa.cargo;
     document.getElementsByTagName('body')[0].appendChild(cargo);
-   
+
+
+   //MOSTRA TODOS OS ELEMENTOS CRIADOS ACIMA NA TELA
     elemento.appendChild(item);
+    item.appendChild(imagem);
+    imagem.appendChild(foto);
     item.appendChild(id);
     item.appendChild(idade);
-    item.appendChild(foto);
     foto.appendChild(img);
-    item.appendChild(nome);
-    item.appendChild(cargo);
+    item.appendChild(texto);
+    texto.appendChild(nome);
+    texto.appendChild(cargo);
   }
 
 
