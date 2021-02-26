@@ -8,12 +8,31 @@ fetch('dados.json')
 function carregaElementosNaPagina(json) {
   const elemento = document.createElement('div');
   elemento.className = 'container';
+ var x = 0;
 
   for(let pessoa of json) {
 
     var item = document.createElement('div');
     item.className = 'item';
-    item.onclick = function(){alert(this.querySelector('.idade').innerText)};
+
+    
+    if(x == 0){
+      item.classList.add("ativo");
+    }
+
+    x++;
+
+
+    item.onclick = function(){
+      document.querySelector('.informacoes .idade strong').innerHTML =  this.querySelector('.idade').innerHTML     
+      document.querySelector('.informacoes .nome strong').innerHTML =  this.querySelector('.nome').innerHTML   
+      document.querySelector('.informacoes .cargo strong').innerHTML =  this.querySelector('.cargo').innerHTML   
+      document.querySelector('.mostraItem .imagem img').setAttribute("src", this.querySelector('.foto').getAttribute('src'));
+      
+
+    };
+
+
 
     //item.onclick = function(){console.log(this)};
     document.getElementsByTagName('body')[0].appendChild(item);
@@ -60,3 +79,4 @@ function carregaElementosNaPagina(json) {
   const resultado = document.querySelector('.resultado');
   resultado.appendChild(elemento);
 }
+
