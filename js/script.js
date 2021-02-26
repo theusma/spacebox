@@ -13,11 +13,12 @@ function carregaElementosNaPagina(json) {
 
     var item = document.createElement('div');
     item.className = 'item';
+    item.onclick = function(){};
     document.getElementsByTagName('body')[0].appendChild(item);
 
     
-    var foto = document.createElement('div');
     foto.className = 'mascaraImagem imagem';
+    var foto = document.createElement('div');
     document.getElementsByTagName('body')[0].appendChild(foto);
 
     var id = document.createElement('p');
@@ -46,7 +47,6 @@ function carregaElementosNaPagina(json) {
     foto.appendChild(img);
     item.appendChild(nome);
     item.appendChild(cargo);
-    
   }
 
   const resultado = document.querySelector('.resultado');
