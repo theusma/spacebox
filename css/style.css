@@ -201,3 +201,13 @@ table {
     color: #092331;
     font-weight: 700;
 }
+
+/*=====================RESPONSIVO============================*/
+
+
+@media screen and (max-width: 1376px) {
+    .container {
+        max-width: 96%;
+    }
+
+}
