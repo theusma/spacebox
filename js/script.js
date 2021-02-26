@@ -17,7 +17,7 @@ function carregaElementosNaPagina(json) {
 
     
     var foto = document.createElement('div');
-    foto.className = 'mascaraImagem';
+    foto.className = 'mascaraImagem imagem';
     document.getElementsByTagName('body')[0].appendChild(foto);
 
     var id = document.createElement('p');
