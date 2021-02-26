@@ -33,11 +33,11 @@ function carregaElementosNaPagina(json) {
     imagem.className = 'todaImagem';
     document.getElementsByTagName('body')[0].appendChild(imagem);
 
-    //ADICIONA  UM DIV QUE ENGLOBA A IMAGEM A CLASS  mascaraImagem imagem
+    //ADICIONA  UM DIV QUE ENGLOBA A IMAGEM A CLASS  mascaraImagem
     var foto = document.createElement('div');
     foto.className = 'mascaraImagem';
     document.getElementsByTagName('body')[0].appendChild(foto);
-
+ 
     //ADICIONA  UMA TAG IMG COM A CLASS  FOTO
     var img = document.createElement("img");
     img.className = 'foto';
