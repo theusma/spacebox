@@ -168,6 +168,12 @@ table {
 #conteudo .numeroId {
     position: absolute;
 }
+
+
+#conteudo .item .todaImagem {
+    width: 30%;
+    float: left;
+}
 #conteudo .item .texto {
     width: 60%;
     float: left;
@@ -180,11 +186,6 @@ table {
 }
 #conteudo .item .texto .cargo{
     font-weight: 300;
-}
-
-#conteudo .item .todaImagem {
-    width: 30%;
-    float: left;
 }
 #conteudo .item .numeroId {
     position: absolute;
