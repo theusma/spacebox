@@ -13,18 +13,24 @@ function carregaElementosNaPagina(json) {
 
     var item = document.createElement('div');
     item.className = 'item';
-    item.onclick = function(){};
+    item.onclick = function(){alert(this.querySelector('.idade').innerText)};
+
+    //item.onclick = function(){console.log(this)};
     document.getElementsByTagName('body')[0].appendChild(item);
 
-    
-    foto.className = 'mascaraImagem imagem';
     var foto = document.createElement('div');
+    foto.className = 'mascaraImagem imagem';
     document.getElementsByTagName('body')[0].appendChild(foto);
 
     var id = document.createElement('p');
     id.className = 'numeroId';
     id.innerHTML = pessoa.id;
     document.getElementsByTagName('body')[0].appendChild(id);
+
+    var idade = document.createElement('p');
+    idade.className = 'idade';
+    idade.innerHTML = pessoa.idade;
+    document.getElementsByTagName('body')[0].appendChild(idade);
 
     var img = document.createElement("img");
     img.className = 'foto';
@@ -43,11 +49,13 @@ function carregaElementosNaPagina(json) {
    
     elemento.appendChild(item);
     item.appendChild(id);
+    item.appendChild(idade);
     item.appendChild(foto);
     foto.appendChild(img);
     item.appendChild(nome);
     item.appendChild(cargo);
   }
+
 
   const resultado = document.querySelector('.resultado');
   resultado.appendChild(elemento);

@@ -150,4 +150,6 @@ table {
 #conteudo .item .mascaraImagem{
     float: left;
 }
-
+#conteudo .item .idade{
+    display: none;
+}
