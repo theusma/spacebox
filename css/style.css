@@ -262,11 +262,172 @@ table {
     }
 
     #conteudo .item:nth-of-type(2n) {
-        margin-right: 2%;
+        margin-right: 0%;
     }
 
     #conteudo .item:nth-of-type(3n) {
         margin-right: 2%;
+    }
+
+    #conteudo .item:nth-of-type(6n) {
+        margin-right: 0%;
+    }
+    #conteudo .item {
+        width: 45%;
+ 
+    }
+
+}
+@media screen and (max-width: 930px) {
+#header .menu {
+    padding: 10px 0px;
+}
+#header .menu ul li {
+    font-size: 15px;
+}
+}
+
+@media screen and (max-width: 700px) {
+    #conteudo .imagem {
+        width: 25%;
+    }
+    #conteudo .mostraItem {
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+
+    .informacoes p {
+        font-size: 15px;
+    }
+    #conteudo .informacoes p {
+        margin-bottom: 10px;
+    }
+    #conteudo .item {
+        width: 100%;
+        box-sizing: border-box;
+        float: left;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #conteudo .item .todaImagem {
+        width: 16%;
+    }
+    #conteudo .item .texto {
+        width: 70%;
+    }
+
+    #conteudo .item .texto {
+        font-size: 15px;
+    }
+
+    #header .logo {
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    #conteudo .imagem {
+        width: 30%;
+    }
+
+    #conteudo .informacoes {
+        width: 70%;
+    }
+
+    #conteudo .item .todaImagem {
+        width: 23%;
+    }
+    #conteudo .item .texto {
+        width: 63%;
+    }
+
+    #conteudo .mascaraImagem {
+        width: 95px;
+        height: 95px;
+    }
+
+    #conteudo .mascaraImagem img {
+        max-width: 145px;
+        right: -25px;
+    }
+
+    #conteudo .item .numeroId {
+        width: 13px;
+        height: 13px;
+        left: 85px;
+        margin-top: 10px;
+    }
+
+    #conteudo .mostraItem {
+        padding: 3%;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 460px) {
+    #header .menu ul li {
+        font-size: 14px;
+    }
+    #header .menu ul li {
+        margin-right: 10px;
+
+    }
+
+    #header .logo {
+        width: 32%;
+    }
+
+    #conteudo .informacoes {
+        width: 65%;
+    }
+
+    #conteudo .imagem {
+        width: 35%;
+    }
+    #conteudo .item {
+        padding: 3%;
+   
+    }
+
+    #conteudo .item .texto {
+        margin-top: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #conteudo .item .texto {
+        width: 50%;
+    }
+    #conteudo .item .todaImagem {
+        width: 25%;
+    }
+
+    #conteudo .imagem {
+        width: 40%;
+    }
+
+    #conteudo .informacoes {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 370px) {
+    #header .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    #header .logo img{
+        max-width: 140px;
+    }
+
+    #header .menu ul {
+        text-align: center;
+        margin-top: 60px;
     }
 
 }
