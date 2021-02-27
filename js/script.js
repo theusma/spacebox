@@ -25,7 +25,10 @@ function carregaElementosNaPagina(json) {
       document.querySelector('.informacoes .nome strong').innerHTML =  this.querySelector('.nome').innerHTML   
       document.querySelector('.informacoes .cargo strong').innerHTML =  this.querySelector('.cargo').innerHTML   
       document.querySelector('.mostraItem .imagem img').setAttribute("src", this.querySelector('.foto').getAttribute('src'));
+      document.querySelector(".ativo").classList.remove("ativo");
       
+
+      this.classList.add("ativo");
 
     };
     //ADICIONA  UMA DIV QUE TODOS ELEMENTOS DA IMAGEM 
